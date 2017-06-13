@@ -18,6 +18,7 @@
   "homepage": "https://github.com/BillHahn/bh-bigquery-sandbox#readme",
   "dependencies": {
     "@google-cloud/bigquery": "^0.9.5",
+    "@google-cloud/storage": "^1.1.1",
     "bigquery": "0.0.6",
     "string": "^3.3.3"
   }
