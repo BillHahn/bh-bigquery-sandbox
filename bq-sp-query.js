@@ -34,3 +34,20 @@ function queryShakespeare(projectId) {
       console.error('ERROR:', err);
     });
 }
+
+function printResult(rows) {
+  console.log('Query Results:');
+  rows.forEach(function(row) {
+    let str = '';
+    for (let key in row) {
+      if (str) {
+        //str = `${str}\n`;
+        str = `${str}\n\t\t\t\t`;
+      }
+      str = `${str}${key}: ${row[key]}`;
+    }
+    console.log(str);
+  });
+}
+
+queryShakespeare(projectId);
