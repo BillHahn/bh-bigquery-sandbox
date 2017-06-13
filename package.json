@@ -1,0 +1,24 @@
+{
+  "name": "bh-bigquery-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bq-sp-query.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BillHahn/bh-bigquery-sandbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BillHahn/bh-bigquery-sandbox/issues"
+  },
+  "homepage": "https://github.com/BillHahn/bh-bigquery-sandbox#readme",
+  "dependencies": {
+    "@google-cloud/bigquery": "^0.9.5",
+    "bigquery": "0.0.6",
+    "string": "^3.3.3"
+  }
+}
