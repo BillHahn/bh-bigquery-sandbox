@@ -1,0 +1,294 @@
+{
+  "kind": "bigquery#job",
+  "etag": etag,
+  "id": string,
+  "selfLink": string,
+  "jobReference": {
+    "projectId": string,
+    "jobId": string
+  },
+  "configuration": {
+    "query": {
+      "query": string,
+      "destinationTable": {
+        "projectId": string,
+        "datasetId": string,
+        "tableId": string
+      },
+      "tableDefinitions": {
+        (key): {
+          "sourceUris": [
+            string
+          ],
+          "schema": {
+            "fields": [{
+              "name": string,
+              "type": string,
+              "mode": string,
+              "fields": [
+                (TableFieldSchema)
+              ],
+              "description": string
+            }]
+          },
+          "sourceFormat": string,
+          "maxBadRecords": integer,
+          "autodetect": boolean,
+          "ignoreUnknownValues": boolean,
+          "compression": string,
+          "csvOptions": {
+            "fieldDelimiter": string,
+            "skipLeadingRows": long,
+            "quote": string,
+            "allowQuotedNewlines": boolean,
+            "allowJaggedRows": boolean,
+            "encoding": string
+          },
+          "bigtableOptions": {
+            "columnFamilies": [{
+              "familyId": string,
+              "type": string,
+              "encoding": string,
+              "columns": [{
+                "qualifierEncoded": bytes,
+                "qualifierString": string,
+                "fieldName": string,
+                "type": string,
+                "encoding": string,
+                "onlyReadLatest": boolean
+              }],
+              "onlyReadLatest": boolean
+            }],
+            "ignoreUnspecifiedColumnFamilies": boolean,
+            "readRowkeyAsString": boolean
+          },
+          "googleSheetsOptions": {
+            "skipLeadingRows": long
+          }
+        }
+      },
+      "userDefinedFunctionResources": [{
+        "resourceUri": string,
+        "inlineCode": string
+      }],
+      "createDisposition": string,
+      "writeDisposition": string,
+      "defaultDataset": {
+        "datasetId": string,
+        "projectId": string
+      },
+      "priority": string,
+      "preserveNulls": boolean,
+      "allowLargeResults": boolean,
+      "useQueryCache": boolean,
+      "flattenResults": boolean,
+      "maximumBillingTier": integer,
+      "maximumBytesBilled": long,
+      "useLegacySql": boolean,
+      "parameterMode": string,
+      "queryParameters": [{
+        "name": string,
+        "parameterType": {
+          "type": string,
+          "arrayType": (QueryParameterType),
+          "structTypes": [{
+            "name": string,
+            "type": (QueryParameterType),
+            "description": string
+          }]
+        },
+        "parameterValue": {
+          "value": string,
+          "arrayValues": [
+            (QueryParameterValue)
+          ],
+          "structValues": {
+            (key): (QueryParameterValue)
+          }
+        }
+      }],
+      "schemaUpdateOptions": [
+        string
+      ]
+    },
+    "load": {
+      "sourceUris": [
+        string
+      ],
+      "schema": {
+        "fields": [{
+          "name": string,
+          "type": string,
+          "mode": string,
+          "fields": [
+            (TableFieldSchema)
+          ],
+          "description": string
+        }]
+      },
+      "destinationTable": {
+        "projectId": string,
+        "datasetId": string,
+        "tableId": string
+      },
+      "createDisposition": string,
+      "writeDisposition": string,
+      "nullMarker": string,
+      "fieldDelimiter": string,
+      "skipLeadingRows": integer,
+      "encoding": string,
+      "quote": string,
+      "maxBadRecords": integer,
+      "schemaInlineFormat": string,
+      "schemaInline": string,
+      "allowQuotedNewlines": boolean,
+      "sourceFormat": string,
+      "allowJaggedRows": boolean,
+      "ignoreUnknownValues": boolean,
+      "projectionFields": [
+        string
+      ],
+      "autodetect": boolean,
+      "schemaUpdateOptions": [
+        string
+      ]
+    },
+    "copy": {
+      "sourceTable": {
+        "projectId": string,
+        "datasetId": string,
+        "tableId": string
+      },
+      "sourceTables": [{
+        "projectId": string,
+        "datasetId": string,
+        "tableId": string
+      }],
+      "destinationTable": {
+        "projectId": string,
+        "datasetId": string,
+        "tableId": string
+      },
+      "createDisposition": string,
+      "writeDisposition": string
+    },
+    "extract": {
+      "sourceTable": {
+        "projectId": string,
+        "datasetId": string,
+        "tableId": string
+      },
+      "destinationUri": string,
+      "destinationUris": [
+        string
+      ],
+      "printHeader": boolean,
+      "fieldDelimiter": string,
+      "destinationFormat": string,
+      "compression": string
+    },
+    "dryRun": boolean,
+    "labels": {
+      (key): string
+    }
+  },
+  "status": {
+    "state": string,
+    "errorResult": {
+      "reason": string,
+      "location": string,
+      "debugInfo": string,
+      "message": string
+    },
+    "errors": [{
+      "reason": string,
+      "location": string,
+      "debugInfo": string,
+      "message": string
+    }]
+  },
+  "statistics": {
+    "creationTime": long,
+    "startTime": long,
+    "endTime": long,
+    "totalBytesProcessed": long,
+    "query": {
+      "queryPlan": [{
+        "name": string,
+        "id": long,
+        "waitRatioAvg": double,
+        "waitRatioMax": double,
+        "readRatioAvg": double,
+        "readRatioMax": double,
+        "computeRatioAvg": double,
+        "computeRatioMax": double,
+        "writeRatioAvg": double,
+        "writeRatioMax": double,
+        "recordsRead": long,
+        "recordsWritten": long,
+        "status": string,
+        "steps": [{
+          "kind": string,
+          "substeps": [
+            string
+          ]
+        }]
+      }],
+      "totalBytesProcessed": long,
+      "totalBytesBilled": long,
+      "billingTier": integer,
+      "cacheHit": boolean,
+      "referencedTables": [{
+        "projectId": string,
+        "datasetId": string,
+        "tableId": string
+      }],
+      "schema": {
+        "fields": [{
+          "name": string,
+          "type": string,
+          "mode": string,
+          "fields": [
+            (TableFieldSchema)
+          ],
+          "description": string
+        }]
+      },
+      "numDmlAffectedRows": long,
+      "undeclaredQueryParameters": [{
+        "name": string,
+        "parameterType": {
+          "type": string,
+          "arrayType": (QueryParameterType),
+          "structTypes": [{
+            "name": string,
+            "type": (QueryParameterType),
+            "description": string
+          }]
+        },
+        "parameterValue": {
+          "value": string,
+          "arrayValues": [
+            (QueryParameterValue)
+          ],
+          "structValues": {
+            (key): (QueryParameterValue)
+          }
+        }
+      }],
+      "statementType": string
+    },
+    "load": {
+      "inputFiles": long,
+      "inputFileBytes": long,
+      "outputRows": long,
+      "outputBytes": long
+    },
+    "extract": {
+      "destinationUriFileCounts": [
+        long
+      ]
+    }
+  },
+  "user_email": string
+}
