@@ -5,15 +5,15 @@ const BigQuery = require('@google-cloud/bigquery');
 const projectId = "bill-hahn-sandbox";
 
 // The ID of the dataset in which to create the table, e.g. "my_dataset"
-const datasetId = "nodejs_created_dataset";
+const datasetId = "Agency_Rollups";
 
 // The ID for the new table, e.g. "my_new_table"
 //const tableId = "babynames_yr";
-const tableId = "babynames_yr";
+const tableId = "Agency_Top_Clients_Rollup";
 
 // The schema of the new table, e.g. "Name:string, Age:integer, Weight:float, IsMagic:boolean"
 const schema =
-  "name,gender,count:integer,year";
+  "ad_client_id, platform, campaign_id, campaign, impressions:integer, clicks:integer, ctr:float, ave_cpc:float, conversions:integer, activity_type:integer, cost:float, revenue:float, profit:float, profit_perc:float";
 
 // Instantiates a client
 const bigquery = BigQuery({

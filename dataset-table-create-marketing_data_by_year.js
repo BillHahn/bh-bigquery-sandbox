@@ -5,11 +5,11 @@ const BigQuery = require('@google-cloud/bigquery');
 const projectId = "bill-hahn-sandbox";
 
 // The ID of the dataset in which to create the table, e.g. "my_dataset"
-const datasetId = "nodejs_created_dataset";
+const datasetId = "Marketing_Dataset";
 
 // The ID for the new table, e.g. "my_new_table"
 //const tableId = "babynames_yr";
-const tableId = "babynames_yr";
+const tableId = "Marketing_Data_by_Year";
 
 // The schema of the new table, e.g. "Name:string, Age:integer, Weight:float, IsMagic:boolean"
 const schema =
